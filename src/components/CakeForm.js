@@ -19,6 +19,7 @@ const CakeForm =({cakes, newCake}) => {
         setError(errorMessage);
         return errorMessage !== "";
     }
+    c
     
 
 
@@ -31,9 +32,27 @@ const CakeForm =({cakes, newCake}) => {
                 type="text"
                 name="recipeName"
                 placeholder="Enter recipe name here"
-                value={}
+                value={recipeName}
+                onChange={(evt) => setRecipeName(evt.target.value)}
+            />
+            <input 
+                type="text"
+                name="ingredients"
+                placeholder="Enter ingredients here"
+                value={ingredients}
+                onChange={(evt) => setIngredients(evt.target.value)}
+            />
+            <input 
+                type="number"
+                name="rating"
+                min = "1"
+                max = "5"
+                placeholder="Enter rating here"
+                value={rating}
+                onChange={(evt) => setRating(evt.target.value)}
             />
         </>
     );
-    
 };
+
+export default CakeForm;
