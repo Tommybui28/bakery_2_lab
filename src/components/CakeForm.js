@@ -29,7 +29,7 @@ const CakeForm =({cakes, addCake}) => {
                 ingredients: ingredients.split(","),
                 rating,
             };
-            console.log(newRecipe);
+        
             addCake(newRecipe);
             return;
         }
@@ -46,7 +46,7 @@ const CakeForm =({cakes, addCake}) => {
             <input 
                 type="text"
                 name="cakeName"
-                placeholder="Enter recipe name here"
+                placeholder="Enter cake name here"
                 value={cakeName}
                 onChange={(evt) => setCakeName(evt.target.value)}
             />

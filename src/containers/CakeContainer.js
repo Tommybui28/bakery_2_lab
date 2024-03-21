@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CakeList  from "../components/CakeList";
 import CakeForm from "../components/CakeForm";
+import SearchForm from "../components/SearchForm";
 
 const CakeContainer = () => {
 
@@ -35,6 +36,7 @@ const CakeContainer = () => {
         <>
             <CakeList cakes={cakes}/>
             <CakeForm cakes={cakes} addCake={addCake}/>
+            <SearchForm cakes={cakes}/>
         </>
     )
 
