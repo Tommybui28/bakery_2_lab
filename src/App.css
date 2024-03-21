@@ -1,0 +1,36 @@
+body{
+  background-color: #f69044;
+}
+
+h1{
+  width: 20%;
+  margin: auto;
+  margin-top: 1em;
+  text-align: center;
+  background-color: #fdeadc;
+  padding: 1em;
+  border-radius: 25px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  margin: 1em 2em 1em 2em;
+}
+
+.cake{
+  background-color: #fdeadc;
+  padding: 1em;
+  border-radius: 25px;
+}
+
+#price{
+  width: 20%;
+  margin: auto;
+  margin-top: 1em;
+  text-align: center;
+  background-color: #fdeadc;
+  padding: 1em;
+  border-radius: 25px;
+}
