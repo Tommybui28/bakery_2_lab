@@ -29,14 +29,16 @@ const CakeContainer = () => {
         
     ]);
     const addCake = (newCake) => {
+        
         setCakes([...cakes, newCake]);
     }
+    // const filteredCakes = ()
 
     return (
         <>
             <CakeList cakes={cakes}/>
             <CakeForm cakes={cakes} addCake={addCake}/>
-            <SearchForm cakes={cakes}/>
+            <SearchForm cakes={cakes} setCakes={setCakes}/>
         </>
     )
 

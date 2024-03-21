@@ -1,5 +1,5 @@
 body{
-  background-color: #f69044;
+  background-color: #BBD1EA;
 }
 
 h1{
@@ -7,7 +7,7 @@ h1{
   margin: auto;
   margin-top: 1em;
   text-align: center;
-  background-color: #fdeadc;
+  background-color: #DAE3E5;
   padding: 1em;
   border-radius: 25px;
 }
@@ -20,7 +20,7 @@ h1{
 }
 
 .cake{
-  background-color: #fdeadc;
+  background-color:#DAE3E5;
   padding: 1em;
   border-radius: 25px;
 }

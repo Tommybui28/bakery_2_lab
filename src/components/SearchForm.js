@@ -1,9 +1,25 @@
-const SearchForm = (cakes) => {
+const SearchForm = ({cakes, setCakes}) => {
+
+
+    const handleSearchSubmit = (evt) => {
+        evt.preventDefault();
+
+        const wantedCake = evt.target["cakeName"].value;
+        const filteredCakes = cakes.filter((cake) =>
+        {
+            return cake.cakeName.toLowerCase().includes(wantedCake.toLowerCase())
+        
+        } 
+        
+        );
+        setCakes(filteredCakes);
+    };
+    
 
     return (
         <>
         <h2>Search Here: </h2>
-        <form role="search" >
+        <form onSubmit={handleSearchSubmit}>
             <input 
                 type="search"
                 name="cakeName"
