@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Cake from "../components/Cake";
 import CakeList  from "../components/CakeList";
 import CakeForm from "../components/CakeForm";
 
@@ -28,8 +27,8 @@ const CakeContainer = () => {
         }
         
     ]);
-    const addCake = (addCake) => {
-        setCakes([...cakes, addCake]);
+    const addCake = (newCake) => {
+        setCakes([...cakes, newCake]);
     }
 
     return (

@@ -1,32 +1,35 @@
 import {useState} from "react";
 const CakeForm =({cakes, addCake}) => {
 
-    const [recipeName, setRecipeName] = useState("");
-    const [ingredients, setIngredients] = useState("");
+    const [cakeName, setCakeName] = useState("");
+    const [ingredients, setIngredients] = useState([]);
     const [rating, setRating] = useState("");
 
-    useState("");
     const[error, setError] = useState("");
     
     const handleValidation = () => {
         let validation = true;
         
-        if (cakes.find((cake) => cake.recipeName === recipeName)) {
+        if (cakes.find((cake) => cake.cakeName === cakeName)) {
             setError("Recipe already exists");
             validation = false;
         }
         
         return validation;
     };
+    
     const handleSubmit = (event) => {
         event.preventDefault();
 
+        
         if (handleValidation()){
-            const newRecipe = {
-                recipeName,
-                ingredients,
+
+            let newRecipe = {
+                cakeName,
+                ingredients: ingredients.split(","),
                 rating,
             };
+            console.log(newRecipe);
             addCake(newRecipe);
             return;
         }
@@ -39,13 +42,13 @@ const CakeForm =({cakes, addCake}) => {
     return (
        <>
         <h2>Add Recipe Here!</h2>
-        <form onSubmit={handleSubmit} />
+        <form onSubmit={handleSubmit}>
             <input 
                 type="text"
-                name="recipeName"
+                name="cakeName"
                 placeholder="Enter recipe name here"
-                value={recipeName}
-                onChange={(evt) => setRecipeName(evt.target.value)}
+                value={cakeName}
+                onChange={(evt) => setCakeName(evt.target.value)}
             />
             <input 
                 type="text"
@@ -63,6 +66,8 @@ const CakeForm =({cakes, addCake}) => {
                 value={rating}
                 onChange={(evt) => setRating(evt.target.value)}
             />
+            <input type="submit" value="Submit"/>
+        </form>
         </>
     );
 };

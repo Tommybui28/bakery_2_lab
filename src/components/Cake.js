@@ -6,16 +6,13 @@ const Cake = ({cake}) => {
             <h3>{cake.cakeName}</h3>
             <h4>Ingredients:</h4>
             <ul>
-                {cake.ingredients.map( ingredient => {
-                    return <li>{ingredient}</li>
+                {cake.ingredients.map( (ingredient, id) => {
+                    return <li key={id}>{ingredient}</li>
                 })}
             </ul>
             <p>Rating: {cake.rating}</p>
-            <p>Price: £{cake.price}</p>
 
-            <li>
-                {}
-            </li>
+            
         </div>
     )
 
