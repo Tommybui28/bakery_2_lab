@@ -1,5 +1,5 @@
-import {useDebugValue, useState} from "react";
-const CakeForm =({cakes, newCake}) => {
+import {useState} from "react";
+const CakeForm =({cakes, addCake}) => {
 
     const [recipeName, setRecipeName] = useState("");
     const [ingredients, setIngredients] = useState("");
@@ -10,16 +10,28 @@ const CakeForm =({cakes, newCake}) => {
     
     const handleValidation = () => {
         let validation = true;
-        let errorMessage ="";
         
         if (cakes.find((cake) => cake.recipeName === recipeName)) {
-            errorMessage = "This Recipe already exists";
+            setError("Recipe already exists");
             validation = false;
         }
-        setError(errorMessage);
-        return errorMessage !== "";
+        
+        return validation;
+    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (handleValidation()){
+            const newRecipe = {
+                recipeName,
+                ingredients,
+                rating,
+            };
+            addCake(newRecipe);
+            return;
+        }
+        alert(error);
     }
-    c
     
 
 
