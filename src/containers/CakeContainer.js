@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Cake from "../components/Cake";
 import CakeList  from "../components/CakeList";
-import CakeForms from "../components/CakeForm";
+import CakeForm from "../components/CakeForm";
 
 const CakeContainer = () => {
 
@@ -26,11 +26,16 @@ const CakeContainer = () => {
             ingredients: ["carrots", "walnuts", "oil", "cream cheese", "flour", "sugar"],
             rating: 5
         }
+        
     ]);
+    const addCake = (addCake) => {
+        setCakes([...cakes, addCake]);
+    }
 
     return (
         <>
             <CakeList cakes={cakes}/>
+            <CakeForm cakes={cakes} addCake={addCake}/>
         </>
     )
 
