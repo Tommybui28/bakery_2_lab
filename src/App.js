@@ -4,8 +4,8 @@ import CakeContainer from './containers/CakeContainer';
 function App() {
   return (
     <div className="App">
-        <h1>BNTA Bakery</h1>
-        <CakeContainer />
+        <h1>Bakery</h1>
+        <CakeContainer/>
     </div>
   );
 }

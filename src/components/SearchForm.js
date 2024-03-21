@@ -19,7 +19,7 @@ const SearchForm = ({cakes, setCakes}) => {
     return (
         <>
         <h2>Search Here: </h2>
-        <form onSubmit={handleSearchSubmit}>
+        <form onSubmit={handleSearchSubmit} className="form">
             <input 
                 type="search"
                 name="cakeName"

@@ -5,6 +5,6 @@ const CakeList = ({ cakes }) => {
         return <Cake cake={cake} key={id} />;
     });
 
-    return <ul>{cakeComponents}</ul>
+    return <ul className="list">{cakeComponents}</ul>
 }
 export default CakeList;
